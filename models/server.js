@@ -7,7 +7,7 @@ dotenv.config();
 export class Server {
   constructor() {
     this.app = express();
-    this.port = process.env.PORT;
+    this.port = process.env.PORT || 3000;
     //Paths
     this.usuariosPath = "/api/usuarios";
     //Middleware
