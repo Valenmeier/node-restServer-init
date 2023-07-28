@@ -29,6 +29,12 @@ export class Server {
   middlewares() {
     //CORS
     this.app.use(cors());
+
+    // Habilitar el popup
+    this.app.use((req, res, next) => {
+      res.header("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
+      next();
+    });
     //Lectura y parseo del body
     this.app.use(express.json());
     //Directorio publico

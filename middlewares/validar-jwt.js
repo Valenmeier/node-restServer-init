@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import Usuario from "../models/usuario.js";
-import usuario from "../models/usuario.js";
+
 
 export const validarJWT = async (req, res, next) => {
   const token = req.header("x-token");
